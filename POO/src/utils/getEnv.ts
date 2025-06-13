@@ -1,0 +1,1 @@
+export const getPortEnv = ()=> Number(process.env.PORT) || 3333;
