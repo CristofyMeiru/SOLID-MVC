@@ -12,24 +12,23 @@ export class ProductServiceImplementation implements ProductService {
   private constructor(readonly repository: ProductRepository) {}
 
   public static build(repository: ProductRepository) {
-    return new ProductServiceImplementation(repository)
+    return new ProductServiceImplementation(repository);
   }
 
   public async create(name: string, price: number): Promise<CreateOutputDTO> {
-
-    if(!name || !price){
-      throw new Error("Dados inválidos.")
+    if (!name || !price) {
+      throw new Error("Dados inválidos.");
     }
-    
+
     const aProduct = Product.create(name, price);
 
     await this.repository.save(aProduct);
 
     const output: CreateOutputDTO = {
       id: aProduct.id,
-      balance: aProduct.quantity
-    }
-   
+      balance: aProduct.quantity,
+    };
+
     return output;
   }
 
@@ -71,8 +70,8 @@ export class ProductServiceImplementation implements ProductService {
       };
     });
     const output: ListOutputDTO = {
-        products
-    }
+      products,
+    };
     return output;
   }
 }

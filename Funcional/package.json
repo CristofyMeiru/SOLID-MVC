@@ -1,0 +1,32 @@
+{
+	"dependencies": {
+		"@prisma/client": "^6.9.0",
+		"dotenv": "^16.5.0",
+		"fastify": "^5.4.0",
+		"pino-pretty": "^13.0.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.2.3"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.1",
+		"@typescript-eslint/eslint-plugin": "^8.34.0",
+		"@typescript-eslint/parser": "^8.34.0",
+		"prisma": "^6.9.0",
+		"ts-node": "^10.9.2",
+		"tsx": "^4.20.3"
+	},
+	"name": "funcional",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"dev": "tsx watch src/main.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module"
+}

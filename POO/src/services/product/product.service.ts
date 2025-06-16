@@ -11,7 +11,7 @@ export type ListOutputDTO = {
         id: string;
         name: string;
         price: number;
-        balance: number;
+        balance: number;    
     }[];
 }
 export type CreateOutputDTO = {

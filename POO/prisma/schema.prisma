@@ -9,9 +9,10 @@ datasource db {
 }
 
 model Product {
-  @@map("products")
   id       String @id @unique
   name     String
   price    Float
   quantity Int
+
+  @@map("products")
 }
